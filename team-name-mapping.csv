@@ -9,7 +9,6 @@ Arkansas,Arkansas (SEC),Arkansas
 Arkansas State,Arkansas St. (Sun Belt),Arkansas State
 Army,Army West Point (FBS Independent),Army
 Auburn,Auburn (SEC),Auburn
-BYU,BYU (Big 12),BYU
 Ball State,Ball St. (MAC),Ball State
 Baylor,Baylor (Big 12),Baylor
 Boise State,Boise St. (Mountain West),Boise State
@@ -18,87 +17,82 @@ Bowling Green,Bowling Green (MAC),Bowling Green
 Buffalo,Buffalo (MAC),Buffalo
 California,California (Pac-12),California
 Central Michigan,Central Mich. (MAC),Central Michigan
-Charlotte,Charlotte (AAC),Charlotte
-Cincinnati,Cincinnati (Big 12),Cincinnati
-Clemson,Clemson (ACC),Clemson
+Charlotte,Charlotte (C-USA),Charlotte
+Cincinnati,Cincinnati (AAC),Cincinnati
 Coastal Carolina,Coastal Carolina (Sun Belt),Coastal Carolina
 Colorado,Colorado (Pac-12),Colorado
-Colorado State,Colorado St. (Mountain West),Colorado State
+Colorado State,Colorado State (Mountain West),Colorado State
+Clemson,Clemson (ACC),Clemson
 Duke,Duke (ACC),Duke
 East Carolina,East Carolina (AAC),East Carolina
-Eastern Michigan,Eastern Mich. (MAC),Eastern Michigan
-Florida International,FIU (CUSA),Florida International
-Florida Atlantic,Fla. Atlantic (AAC),Florida Atlantic
+Eastern Michigan,Eastern Michigan (MAC),Eastern Michigan
 Florida,Florida (SEC),Florida
-Florida State,Florida St. (ACC),Florida State
-Fresno State,Fresno St. (Mountain West),Fresno State
-Southern,Ga. Southern (Sun Belt),Southern
+Florida Atlantic,Fla. Atlantic (C-USA),Florida Atlantic
+Florida International,FIU (C-USA),Florida International
+Florida State,Florida State (ACC),Florida State
+Fresno State,Fresno State (Mountain West),Fresno State
 Georgia,Georgia (SEC),Georgia
-Georgia State,Georgia St. (Sun Belt),Georgia State
+Georgia State,Georgia State (Sun Belt),Georgia State
 Georgia Tech,Georgia Tech (ACC),Georgia Tech
+Georgia Southern,Ga. Southern (Sun Belt),Georgia Southern
 Hawai'i,Hawaii (Mountain West),Hawai'i
-Houston,Houston (Big 12),Houston
+Houston,Houston (AAC),Houston
 Illinois,Illinois (Big Ten),Illinois
 Indiana,Indiana (Big Ten),Indiana
 Iowa,Iowa (Big Ten),Iowa
-Iowa State,Iowa St. (Big 12),Iowa State
+Iowa State,Iowa State (Big 12),Iowa State
 Jacksonville State,Jacksonville St. (CUSA),Jacksonville State
 James Madison,James Madison (Sun Belt),James Madison
 Kansas,Kansas (Big 12),Kansas
-Kansas State,Kansas St. (Big 12),Kansas State
-Kent State,Kent St. (MAC),Kent State
+Kansas State,Kansas State (Big 12),Kansas State
+Kent State,Kent State (MAC),Kent State
 Kentucky,Kentucky (SEC),Kentucky
 LSU,LSU (SEC),LSU
-Liberty,Liberty (CUSA),Liberty
+Liberty,Liberty (FBS Independent),Liberty
 Louisiana,Louisiana (Sun Belt),Louisiana
-Louisiana Tech,Louisiana Tech (CUSA),Louisiana Tech
+Louisiana Tech,Louisiana Tech (C-USA),Louisiana Tech
 Louisville,Louisville (ACC),Louisville
-Marshall,Marshall (Sun Belt),Marshall
 Maryland,Maryland (Big Ten),Maryland
 Massachusetts,Massachusetts (FBS Independent),Massachusetts
 Memphis,Memphis (AAC),Memphis
 Miami,Miami (FL) (ACC),Miami (FL)
 Miami (OH),Miami (OH) (MAC),Miami (OH)
 Michigan,Michigan (Big Ten),Michigan
-Michigan State,Michigan St. (Big Ten),Michigan State
-Middle Tennessee,Middle Tenn. (CUSA),Middle Tennessee
+Michigan State,Michigan State (Big Ten),Michigan State
 Minnesota,Minnesota (Big Ten),Minnesota
-Mississippi State,Mississippi St. (SEC),Mississippi State
+Mississippi State,Mississippi State (SEC),Mississippi State
 Missouri,Missouri (SEC),Missouri
-NC State,NC State (ACC),NC State
-Northern Illinois,NIU (MAC),Northern Illinois
 Navy,Navy (AAC),Navy
 Nebraska,Nebraska (Big Ten),Nebraska
 Nevada,Nevada (Mountain West),Nevada
 New Mexico,New Mexico (Mountain West),New Mexico
-New Mexico State,New Mexico St. (CUSA),New Mexico State
+New Mexico State,New Mexico St. (FBS Independent),New Mexico State
 North Carolina,North Carolina (ACC),North Carolina
-North Texas,North Texas (AAC),North Texas
+North Texas,North Texas (C-USA),North Texas
+Northern Illinois,Northern Illinois (MAC),Northern Illinois
 Northwestern,Northwestern (Big Ten),Northwestern
 Notre Dame,Notre Dame (FBS Independent),Notre Dame
 Ohio,Ohio (MAC),Ohio
-Ohio State,Ohio St. (Big Ten),Ohio State
+Ohio State,Ohio State (Big Ten),Ohio State
 Oklahoma,Oklahoma (Big 12),Oklahoma
-Oklahoma State,Oklahoma St. (Big 12),Oklahoma State
-Old Dominion,Old Dominion (Sun Belt),Old Dominion
+Oklahoma State,Oklahoma State (Big 12),Oklahoma State
 Ole Miss,Ole Miss (SEC),Ole Miss
+Old Dominion,Old Dominion (C-USA),Old Dominion
 Oregon,Oregon (Pac-12),Oregon
-Oregon State,Oregon St. (Pac-12),Oregon State
-Penn State,Penn St. (Big Ten),Penn State
+Oregon State,Oregon State (Pac-12),Oregon State
+Penn State,Penn State (Big Ten),Penn State
 Pittsburgh,Pittsburgh (ACC),Pittsburgh
 Purdue,Purdue (Big Ten),Purdue
-Reclassifying,Reclassifying,Reclassifying
-Rice,Rice (AAC),Rice
+Rice,Rice (C-USA),Rice
 Rutgers,Rutgers (Big Ten),Rutgers
 SMU,SMU (AAC),SMU
-Sam Houston,Sam Houston (CUSA),Sam Houston
-San Diego State,San Diego St. (Mountain West),San Diego State
+San Diego State,San Diego State (Mountain West),San Diego State
 San José State,San Jose St. (Mountain West),San José State
 South Alabama,South Alabama (Sun Belt),South Alabama
 South Carolina,South Carolina (SEC),South Carolina
-South Florida,South Fla. (AAC),South Florida
-USC,Southern California (Pac-12),USC
-Southern Miss,Southern Miss. (Sun Belt),Southern Miss
+South Florida,South Florida (AAC),South Florida
+Georgia Southern,Ga. Southern (Sun Belt),Southern
+Southern Miss,Southern Miss (C-USA),Southern Miss
 Stanford,Stanford (Pac-12),Stanford
 Syracuse,Syracuse (ACC),Syracuse
 TCU,TCU (Big 12),TCU
@@ -106,20 +100,20 @@ Temple,Temple (AAC),Temple
 Tennessee,Tennessee (SEC),Tennessee
 Texas,Texas (Big 12),Texas
 Texas A&M,Texas A&M (SEC),Texas A&M
-Texas State,Texas St. (Sun Belt),Texas State
+Texas State,Texas State (Sun Belt),Texas State
 Texas Tech,Texas Tech (Big 12),Texas Tech
 Toledo,Toledo (MAC),Toledo
 Troy,Troy (Sun Belt),Troy
 Tulane,Tulane (AAC),Tulane
 Tulsa,Tulsa (AAC),Tulsa
-UAB,UAB (AAC),UAB
-UCF,UCF (Big 12),UCF
+UAB,UAB (C-USA),UAB
+UCF,UCF (AAC),UCF
 UCLA,UCLA (Pac-12),UCLA
 UConn,UConn (FBS Independent),UConn
-UL Monroe,ULM (Sun Belt),UL Monroe
+UL Monroe,Louisiana (Sun Belt),UL Monroe
 UNLV,UNLV (Mountain West),UNLV
-UTEP,UTEP (CUSA),UTEP
-UTSA,UTSA (AAC),UTSA
+UTEP,UTEP (C-USA),UTEP
+UTSA,UTSA (C-USA),UTSA
 Utah,Utah (Pac-12),Utah
 Utah State,Utah St. (Mountain West),Utah State
 Vanderbilt,Vanderbilt (SEC),Vanderbilt
@@ -129,7 +123,7 @@ Wake Forest,Wake Forest (ACC),Wake Forest
 Washington,Washington (Pac-12),Washington
 Washington State,Washington St. (Pac-12),Washington State
 West Virginia,West Virginia (Big 12),West Virginia
-Western Kentucky,Western Ky. (CUSA),Western Kentucky
+Western Kentucky,Western Ky. (C-USA),Western Kentucky
 Western Michigan,Western Mich. (MAC),Western Michigan
 Wisconsin,Wisconsin (Big Ten),Wisconsin
 Wyoming,Wyoming (Mountain West),Wyoming
