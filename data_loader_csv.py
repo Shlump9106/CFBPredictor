@@ -149,6 +149,13 @@ class DataLoader:
                     df["wins"]   = pd.to_numeric(wl[0], errors="coerce").astype("Int64")
                     df["losses"] = pd.to_numeric(wl[1], errors="coerce").astype("Int64")
                 df.drop(columns=["win_loss"], inplace=True)
+            elif "win" in df.columns and "loss" in df.columns:
+            # Rename to consistent columns 'wins' and 'losses'
+              df["wins"] = pd.to_numeric(df["win"], errors="coerce").astype("Int64")
+              df["losses"] = pd.to_numeric(df["loss"], errors="coerce").astype("Int64")
+              df.drop(columns=["win", "loss"], inplace=True)
+            else:
+              pass
 
             # Robust numeric coercion (strings → numbers, keep NaN for non-numeric)
             for col in df.columns.difference(["team", "season"]):
