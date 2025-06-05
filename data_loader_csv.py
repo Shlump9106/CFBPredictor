@@ -26,6 +26,9 @@ def _clean_col(name: str) -> str:
     Convert a raw column header to lower-snake_case and replace any
     whitespace, dots or dashes with a single underscore.
     """
+    name = name.strip()
+    if name.lower().startswith("x") and name[1:2].isdigit():
+        name = name[1:]  # Strip the leading 'X'
     return re.sub(r"[^0-9a-zA-Z]+", "_", name.strip().lower())
 
 
