@@ -154,8 +154,6 @@ class DataLoader:
               df["wins"] = pd.to_numeric(df["win"], errors="coerce").astype("Int64")
               df["losses"] = pd.to_numeric(df["loss"], errors="coerce").astype("Int64")
               df.drop(columns=["win", "loss"], inplace=True)
-            else:
-              pass
 
             # Robust numeric coercion (strings → numbers, keep NaN for non-numeric)
             for col in df.columns.difference(["team", "season"]):
@@ -232,6 +230,8 @@ class DataLoader:
                 lambda r: "home" if r["home_points"] > r["away_points"] else "away",
                 axis=1
             )
+
+            df["winner"] = df["winner"].map({"home": 1, "away": 0})
 
             frames.append(df)
         games_df = pd.concat(frames, ignore_index=True)
@@ -346,6 +346,7 @@ if __name__ == "__main__":
 
     dl = DataLoader(args.seasons, args.games, args.mapping, args.rolling)
     df = dl.build()
+    df = df.drop_duplicates(subset=["id"])
 
     # Force CSV output, ignoring whatever extension was passed in.
     out_path = Path(args.out)
