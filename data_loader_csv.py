@@ -196,6 +196,9 @@ class DataLoader:
             # Normalise column headers
             df.columns = [_clean_col(c) for c in df.columns]
 
+            if "season_type" in df.columns:
+                df = df[df["season_type"].str.lower() != "postseason"]
+
             # Basic dtype coercions
             bool_cols = ["neutral_site", "conference_game"]
             for bc in bool_cols:
