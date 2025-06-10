@@ -26,4 +26,5 @@ This will train a new model in accordance to the files and hyperparamater consta
 ## Orion Baker's Code
 All code is encompassed by the CFBDecisionTree.ipynb located in this repository. Ideally, should be run in Google Colab, and the one used for my experiments is linked here:
 https://colab.research.google.com/drive/17TxEIvUzCJqZX6VKqeWncFEWpqHcZe-a?usp=sharing
-Run procedurally, top to bottom, with hyperparameters tweakable at Step 5 with max_depth and random_state.
+Run procedurally, top to bottom, with hyperparameters tweakable at Step 5 with max_depth and random_state. You'll need to add the data files final_merged_test_2024.csv, final_merged_training_2020_2022.csv, and final_merged_valadation_2023.csv to the
+colab to run it properly.
