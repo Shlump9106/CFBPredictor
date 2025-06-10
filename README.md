@@ -19,8 +19,8 @@ A single line item for learning would consist of the following:
 
 # How to run each group member's code
 ## John Heibel's Code
-All of John Heibel's code is located within ./neural_net.py. To train a new model and evaluate on the test set, cd into /neural_net and run python neural_net.py.
-This will train a new model in accordance to the files and hyperparamater constants at the top of the file. A new csv file will be generated containing the results of compute_evaluation_metrics.py after every epoch. 
+All of John Heibel's code is located within ./neural_net.py. To train a new model and evaluate on the test set, simply clone the repository, cd into ./neural_net and run python neural_net.py.
+This will train a new model in accordance to the files and hyperparamater constants at the top of the file. A new csv file will be generated containing the results of compute_evaluation_metrics.py after every epoch. This runs on CPU and does not require GPU acceleration.
 
 
 ## Orion Baker's Code
