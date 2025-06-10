@@ -11,11 +11,12 @@ from torch.utils.data import DataLoader
 from torch.optim.lr_scheduler import StepLR
 from evaluation import compute_evaluation_metrics, print_evaluation_results
 from load_and_process import load_and_preprocess, CFBDataset
+import csv
 
 # constants
 TRAIN_CSV = '../final_merged_training_2020_2022.csv'
 TEST_CSV = '../final_merged_test.csv'
-EPOCHS = 3
+EPOCHS = 50
 BATCH_SIZE = 256
 LEARNING_RATE = 5e-4
 HIDDEN_DIM = 96
@@ -73,18 +74,24 @@ def main():
     #use sigmoind binary cross entropy loss as our loss function
     loss_function = nn.BCEWithLogitsLoss()
 
+    # store results for graphing for report
+    csv_file = 'training_results.csv'
+    with open(csv_file, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['epoch', 'train_loss', 'learning_rate', 'accuracy', 'balanced_accuracy', 'f1_score', 'precision', 'recall', 'roc_auc'])
+
     # main training loop
     for epoch in range(1, EPOCHS + 1):
         model.train()
         epoch_loss = 0.0
-        
+
         for features_batch, home_ids_batch, away_ids_batch, labels_batch in train_loader:
             # send batches to cpu
             features_batch = features_batch.to(device)
             home_ids_batch = home_ids_batch.to(device)
             away_ids_batch = away_ids_batch.to(device)
             labels_batch = labels_batch.to(device)
-            
+
             optimizer.zero_grad()
             predictions = model(features_batch, home_ids_batch, away_ids_batch)
             loss = loss_function(predictions, labels_batch)
@@ -92,46 +99,46 @@ def main():
             # calculate loss through backprop
             loss.backward()
             optimizer.step()
-            
+
             epoch_loss += loss.item() * features_batch.size(0)
-        
+
         scheduler.step()
-        
+
         average_loss = epoch_loss / len(train_dataset)
         current_learning_rate = optimizer.param_groups[0]['lr']
         # print current epoch stats
         print(f'Epoch {epoch}/{EPOCHS} loss={average_loss:.4f} lr={current_learning_rate:.2e}')
 
+        #during training eval
+        model.eval()
+        all_test_probs = []
 
-        correct_predictions = 0
-        total_predictions = 0
-        
         with torch.no_grad():
-            #get predictions on test set (2024) or when optimizing hyperparams 2023
             for features_batch, home_ids_batch, away_ids_batch, labels_batch in test_loader:
                 features_batch = features_batch.to(device)
                 home_ids_batch = home_ids_batch.to(device)
                 away_ids_batch = away_ids_batch.to(device)
-                labels_batch = labels_batch.to(device)
-                
+
                 logits = model(features_batch, home_ids_batch, away_ids_batch)
                 probabilities = torch.sigmoid(logits)
-                predictions = (probabilities >= 0.5).float()
-                
-                correct_predictions += (predictions == labels_batch).sum().item()
-                total_predictions += labels_batch.size(0)
-        
-        test_accuracy = correct_predictions / total_predictions if total_predictions > 0 else 0.0
-        print(f"test acc {correct_predictions}/{total_predictions} = {test_accuracy:.4f}")
+                all_test_probs.extend(probabilities.cpu().numpy().tolist())
+        # get eval metrics during training
+        test_results = compute_evaluation_metrics(y_test, np.array(all_test_probs))
+        print_evaluation_results(test_results)
 
-        
+        # log vals
+        with open(csv_file, 'a', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow([epoch, average_loss, current_learning_rate, test_results['accuracy'], test_results['balanced_accuracy'], test_results['f1_score'], test_results['precision'], test_results['recall'], test_results['roc_auc']])
+
+
     baseline_accuracy = np.mean(y_test == 1)
     print(f'Baseline accuracy = {baseline_accuracy:.4f}')
 
     model.eval()
     all_probabilities = []
     all_predictions = []
-    
+
     with torch.no_grad():
         for features_batch, home_ids_batch, away_ids_batch, labels_batch in test_loader:
             features_batch = features_batch.to(device)
@@ -141,7 +148,7 @@ def main():
             logits = model(features_batch, home_ids_batch, away_ids_batch)
             probabilities = torch.sigmoid(logits)
             predictions = (probabilities >= 0.5).float()
-            
+
             all_probabilities.extend(probabilities.cpu().numpy().tolist())
             all_predictions.extend(predictions.cpu().numpy().tolist())
 

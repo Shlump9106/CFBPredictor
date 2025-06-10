@@ -273,14 +273,10 @@ def load_and_preprocess(train_csv, test_csv):
     team_id_mapping = create_team_id_mapping(train_df, test_df)
     
     # Map team ids
-    home_train_ids, away_train_ids, home_test_ids, away_test_ids = map_team_ids(
-        train_df, test_df, team_id_mapping
-    )
+    home_train_ids, away_train_ids, home_test_ids, away_test_ids = map_team_ids(train_df, test_df, team_id_mapping)
 
     # get values
-    return (
-        X_train.values, home_train_ids, away_train_ids, y_train, X_test.values, home_test_ids, away_test_ids, y_test, final_features, team_id_mapping
-    )
+    return (X_train.values, home_train_ids, away_train_ids, y_train, X_test.values, home_test_ids, away_test_ids, y_test, final_features, team_id_mapping)
 
 
 class CFBDataset(Dataset):
