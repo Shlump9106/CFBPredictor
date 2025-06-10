@@ -15,4 +15,9 @@ All three models (Orion: Decision Tree, Alen: Logistic Regression, John: Neural 
 A single line item for learning would consist of the following:
 - Week, Neutral Site, Conference Game, Home Team ID, Home Team Points, Away Team ID, Away Team Points, Home Conference Level, Away Conference Level, **Home Team Win/Lose** (from Game Data)
 - Entirety of Season Data from the past year's season as individual columns, for each team (~300 columns)
-- Rolling Values for past n games. How many were won, average points per game offense, average points per game defense
+- Rolling Values for past 5 games. How many were won, average points per game offense, average points per game defense
+
+# How to run each group member's code
+## John Heibel's Code
+All of John Heibel's code is located within ./neural_net.py. To train a new model and evaluate on the test set, cd into /neural_net and run python neural_net.py.
+This will train a new model in accordance to the files and hyperparamater constants at the top of the file. A new csv file will be generated containing the results of compute_evaluation_metrics.py after every epoch. 
